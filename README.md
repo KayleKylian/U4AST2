@@ -7,7 +7,7 @@ Esta atividade faz parte do curso Embarca Tech e tem como objetivo explorar as f
 ## Vídeo
 
 Para uma visão geral do projeto e uma demonstração prática, assista ao vídeo disponível no link abaixo:
-[![Projeto PICO_W - U4AST2](https://img.youtube.com/vi/om9FSD7-r70/0.jpg)](https://youtu.be/om9FSD)
+[![Projeto PICO_W - U4AST2](https://img.youtube.com/vi/om9FSD7-r70/0.jpg)](https://youtu.be/om9FSD7-r70)
 
 *Contribuição especial de Ighor Dias*
 
