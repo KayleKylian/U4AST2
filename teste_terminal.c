@@ -22,6 +22,19 @@ void beep(uint pin, int duration, int frequency) {
     }
 }
 
+// Função para validar a entrada do usuário
+int isValidCommand(char input) {
+    char validCommands[] = {'r', 'g', 'b', 'o', 'a', 'p', 'q'};
+    int numCommands = sizeof(validCommands) / sizeof(validCommands[0]);
+
+    for (int i = 0; i < numCommands; i++) {
+        if (input == validCommands[i]) {
+            return 1; // Entrada válida
+        }
+    }
+    return 0; // Entrada inválida
+}
+
 int main() {
     // Inicializa as interfaces padrão de I/O
     stdio_init_all();
@@ -45,6 +58,13 @@ int main() {
         // Solicita entrada do usuário
         printf("Lista de Comandos:\n a = branco \n r = vermelho \n g = verde \n b = azul \n o = desligar LEDs \n p = beep \n q = reboot para gravação\n");
         userInput = getchar();
+        getchar(); // Consome o caractere '\n' residual
+
+        // Valida a entrada do usuário
+        if (!isValidCommand(userInput)) {
+            printf("Comando inválido! Por favor, tente novamente.\n");
+            continue; // Volta para o início do loop
+        }
 
         // Processa o comando recebido
         switch (userInput) {
@@ -102,7 +122,7 @@ int main() {
                 break;
 
             default:
-                printf("Digite uma entrada: \n");
+                printf("Digite uma entrada válida!\n");
                 break;
         }
     }
